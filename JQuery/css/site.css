@@ -1,0 +1,21 @@
+﻿.linkVisited {
+    color: green;
+}
+
+.alternate {
+    background-color: grey;
+}
+
+.contour {
+    border: solid;
+    border-width: 2px;
+    border-color: red;
+}
+
+.paragraph {
+    
+}
+
+.menu {
+    font-size: 12px;
+}
