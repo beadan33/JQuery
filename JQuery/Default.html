@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.2.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Trouve tous les éléments
+            //$('a,p').addClass("linkVisited");
+
+            //Trouve les TR d'une table, on peut ajouter "odd"
+            //$('table tr:odd').addClass("alternate");
+
+            //Trouve les "span" et pour les EVEN on met le contour rouge
+            $('span:even').addClass("contour");
+
+            //Sélection par id et animation
+            //$('#myContent').fadeOut(1500, function() {
+            //    $('#myContent').fadeIn(1500);
+            //});
+
+            //Ajout d'une classe de contour aux images
+            //$('img').addClass("contour");
+
+            //Ajout d'une propriété CSS de marge aux images
+            //$('img').css('margin-top', '20px');
+
+            //Ajout d'un texte après le texte du premier paragraphe seulement
+            //$($('p').first()).append(' - Après le premier paragraphe');
+
+            //Ajout d'un texte après le texte du 2e paragraphe seulement
+            //$($('p')[1]).append(' - Après le 2e paragraphe');
+
+            //Cherche tous les élements avec la classe "paragraph"
+            //$('.paragraph').addClass('contour');
+
+            //Cherche tous les élements avec la classe "paragraph" ou "menu"
+            //$('.paragraph,.menu').addClass('contour');
+
+            //Cherche tous les élements avec la classe "paragraph" qui concerne un item p
+            //$('p.paragraph').addClass('contour');
+
+            //Boucle les DIV et affiche le HTML
+            //$('div').each(function() {
+            //    alert($(this).html());
+            //});
+
+            //Cherche tous les élements "a" avec un attribut "title"
+            //$('a[title]').addClass('contour');
+
+            //Cherche tous les élements "input" avec un attribut "type" qui concerne le texte "text"
+            //$('input[type="text"]').addClass('contour');
+
+            //Cherche tous les élements "input" de type "radio"
+            //$(':input[type="radio"]').css('background-color', 'red');
+
+            //Cherche tous les élements "select" et met la couleur des éléments à "bisque"
+            //$('select').each(function () {
+            //    $(this).css('background-color', 'bisque');
+            //});
+
+            //Val retourne la valeur peut importe le contrôle
+            //alert($($(':input[name = "nom"]')).val());
+            //alert($($('select')).val());
+            //alert($($(':input[type="radio"]')).val());
+
+            //Val initialise aussi la valeur de tous les éléments sélectionnés
+            //($(':input[type]')).val('Nouvelle valeur');
+            //$($('select')).val('Grec');
+
+            //Recherche précise dans la Form "contenuForm" et ensuite les "Select"
+            //$($('#contenuForm select')).val('Grec');
+
+            //Recherche avec un "contient"
+            //$($('p:contains("2e")')[0]).append(' - Contenu ajouté avec le "Contient"');
+
+            //Sélectionne le premier enfant d'un élément des qui est un "span" et met le contour rouge
+            //$('span:first-child').addClass('contour');
+
+            //Sélectionne les éléments "p" qui COMMENCE avec le contenu "test" pour l'attribut attributbidon et met le contour rouge
+            //$('p[attributbidon^="test"').addClass('contour');
+
+            //Sélectionne les éléments "p" qui TERMINE avec le contenu "Autre" pour l'attribut attributbidon et met le contour rouge
+            //$('p[attributbidon$="Autre"').addClass('contour');
+
+            //Sélectionne les éléments "p" qui CONTIENT avec le contenu "test" pour l'attribut attributbidon et met le contour rouge
+            //$('p[attributbidon*="test"').addClass('contour');
+
+            //Remplace le contenu du 2e paragraphe
+            $($('p')[1]).html('Nouveau contenu pour le 2e paragraphe');
+        });
+    </script>
+    <title></title>
+</head>
+<body>
+    <a href="Page1.html" title="Page 1" class="menu">Page 1</a>
+    <a href="Page2.html" class="menu">Page 2</a>
+    <a href="Page3.html" title="Page 3" class="menu">Page 3</a>
+    <div id="myContent">
+        Contenu avec ID myContent
+    </div>
+    <p class="paragraph" attributbidon="testSelect">
+        Paragraphe 1
+    </p>
+    <p class="paragraph" attributbidon="testSelect">
+        Un 2e paragraphe
+    </p>
+    <p class="paragraph" attributbidon="untestAutre">
+        Un 3e paragraphe
+    </p>
+    <span class="paragraph">
+        Un texte SPAN
+    </span>
+    <div>
+        Un texte non sélectionné
+    </div>
+    <table>
+        <tr>
+            <td>
+                Ligne 1 Colonne 1
+            </td>
+            <td>
+                Ligne 1 Colonne 2
+            </td>
+            <td>
+                Ligne 1 Colonne 3
+            </td>
+            <td>
+                Ligne 1 Colonne 4
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ligne 2 Colonne 1
+            </td>
+            <td>
+                Ligne 2 Colonne 2
+            </td>
+            <td>
+                Ligne 2 Colonne 3
+            </td>
+            <td>
+                Ligne 2 Colonne 4
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ligne 3 Colonne 1
+            </td>
+            <td>
+                Ligne 3 Colonne 2
+            </td>
+            <td>
+                Ligne 3 Colonne 3
+            </td>
+            <td>
+                Ligne 3 Colonne 4
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Ligne 4 Colonne 1
+            </td>
+            <td>
+                Ligne 4 Colonne 2
+            </td>
+            <td>
+                Ligne 4 Colonne 3
+            </td>
+            <td>
+                Ligne 4 Colonne 4
+            </td>
+        </tr>
+    </table>
+    <div>
+        <form id="contenuForm">
+            <div>
+                <label>Nom</label>
+                <input name="nom" type="text" value="Beaulieu" />
+            </div>
+            <div>
+                <label>Prénom</label>
+                <input name="prenom" type="text" value="Daniel" />
+            </div>
+            <div>
+                <label>Sexe</label>
+                <input type="radio" name="genre" value="male" checked> Homme<br>
+                <input type="radio" name="genre" value="female"> Femme<br>
+            </div>
+            <div>
+                <label>Met préféré</label>
+                <select>
+                    <option value="Chinois" selected="true">Chinois</option>
+                    <option value="Grec">Grec</option>
+                    <option value="Italien">Italien</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div>
+        <span>Premier élement, premier groupe</span>
+        <span>Deuxième élement, premier groupe</span>
+        <span>Troisième élement, premier groupe</span>
+    </div>
+    <div>
+        <span>Premier élement, deuxième groupe</span>
+        <span>Deuxième élement, deuxième groupe</span>
+        <span>Troisième élement, deuxième groupe</span>
+    </div>
+    <img src="img/Search.gif" />
+    <img src="img/Lock.gif" />
+    <img src="img/Flag_blue.gif" />
+    <img src="img/Flag_finish.gif" />
+    <img src="img/Flag_green.gif" />
+    <img src="img/Flag_orange.gif" />
+    <img src="img/Flag_red.gif" />
+    <img src="img/Flag_white.gif" />
+    <img src="img/Flag_yellow.gif" />
+    <img src="img/Visualiser.gif" />
+</body>
+</html>
